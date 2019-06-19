@@ -17,14 +17,38 @@ public static void main(String[] args)
 {
 /* here assumed that 50 employee accounts can be created
  for the given bank */
-Payroll ac[]=new Payroll[50];
-Scanner sc=new Scanner(System.in);
-System.out.println("Please enter the employee name:");
-//add code
-System.out.println("Please enter the salary: salary <=3000");
-       
-System.out.println("The final Salary including bonus is: ");         
+    Payroll ac[]=new Payroll[50];
+    
+    Scanner sc=new Scanner(System.in);
+    
+    String username;
+    double salary;
+   
+
+    System.out.println("Please enter the employee name:");
+    username=sc.nextLine();
+
+    System.out.println("Please enter the salary: salary <=3000");
+    salary=sc.nextDouble();
+
+  
+    
+    //salary validation
+    while(salary>3000)
+    {
+        System.out.println("Please enter salary <=3000");
+        salary=sc.nextDouble();
+    } 
+
+    Payroll self=new Payroll(salary,username);
+
+    System.out.println("The final Salary of  "+self.getEmp()+" is "+self.finalSalary(salary));
 
 }
 
 }
+
+
+
+
+

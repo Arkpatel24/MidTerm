@@ -48,9 +48,15 @@ public class Payroll
     /**user is the read only field
      * @return the user
      */
-    public String getEmp() {
+    public String getEmp() 
+    {
         return emp;
     }
-    
+    //new salary
+        public double finalSalary(double Salary)
+        {
+        double newSalary=Salary+(Salary*0.10);
+        return newSalary;  
+        }
     
 }
